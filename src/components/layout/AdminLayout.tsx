@@ -17,18 +17,14 @@ export function AdminLayout() {
 
       <Navbar />
 
-     
       <div className="flex flex-1">
-
         <Sidebar />
-
-   
         <main
           id="main-content"
           tabIndex={-1}
-          className="min-w-0 flex-1 p-4 sm:p-6 lg:p-8 focus:outline-none"
+          className="min-w-0 flex-1 p-4 sm:p-5 lg:p-6 focus:outline-none"
         >
-          <div className="mx-auto w-full max-w-6xl">
+          <div className="w-full">
             <Outlet />
           </div>
         </main>

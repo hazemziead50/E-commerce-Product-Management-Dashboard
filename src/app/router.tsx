@@ -1,5 +1,7 @@
 import { createBrowserRouter,Navigate } from "react-router";
 import { AdminLayout } from '@/components/layout/AdminLayout';
+import { CreateProductPage } from '@/features/products/pages/CreateProductPage';
+import { ProductsListPage } from '@/features/products/pages/ProductsListPage';
 
 export const router = createBrowserRouter([
   {
@@ -10,10 +12,22 @@ export const router = createBrowserRouter([
         index: true,
         element: <Navigate to="/products" replace />,
       },
+      
       {
-        path: 'products',
-
-        element: <div className="text-xl font-semibold">صفحة إدارة المنتجات</div>,
+        path: "products/new",
+        element: <CreateProductPage />,
+      },
+      {
+        path: "products",
+        element: <ProductsListPage/>,
+      },
+      {
+        path: 'categories',
+        element: (
+          <div className="rounded-xl border border-slate-200 bg-white p-6 text-sm text-slate-600">
+            Categories Management Workspace (Phase 3)
+          </div>
+        ),
       },
       {
         path: '*',

@@ -13,12 +13,12 @@ export function AppProviders({children}:AppProvidersProps) {
                 queries:{
                     staleTime: 1000*60,
                     refetchOnWindowFocus:false,
-                    retry:1
+                    retry:1,
+                    networkMode: 'always', 
                 }
             }
         })
     )
-
         return(
        <QueryClientProvider client={queryClient}>
             {children}
